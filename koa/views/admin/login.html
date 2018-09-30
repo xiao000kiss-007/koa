@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>HS管理系统</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="{{__HOST__}}/admin/css/bootstrap.css" rel="stylesheet">
+
+     <!--Custom styles for this template-->
+   <link href="{{__HOST__}}/admin/css/signin.css" rel="stylesheet">
+   <!--Script-->
+   <script src="{{__HOST__}}/admin/js/jquery_3.2.1_jquery.slim.min.js"></script>
+   <script src="{{__HOST__}}/admin/js/popper.js_1.12.9_umd_popper.min.js"></script>
+   <script src="{{__HOST__}}/admin/js/bootstrap.js"></script>
+   <script src="{{__HOST__}}/admin/js/hsadmin.js"></script>
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" action="{{__HOST__}}/admin/login/doLogin" method="post"  id="loginForm">
+      <h1 class="h3 mb-3 font-weight-normal text-center">HS管理系统</h1>
+      <label for="inputEmail" class="sr-only"></label>
+      <input type="text" id="inputName" class="form-control" placeholder="用户名" name="username" required autofocus>
+      <label for="inputPassword" class="sr-only"></label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="密码" name="password" required>
+      <label for="inputCode">
+        <input type="text" id="inputCode" class="form-control" placeholder="验证码" name="code" required>
+        <img id="code" src="{{__ROOT__}}/admin/login/code" alt="">
+      </label>
+      <div class="checkbox mb-3 text-left">
+          <input type="checkbox" value="remember-me"> Remember me
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      <p class="mt-5 mb-3 text-muted">&copy;深圳市恒深财务服务有限公司2017-2018</p>
+    </form>
+</body>
+</html>

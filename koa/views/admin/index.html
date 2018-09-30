@@ -1,0 +1,28 @@
+{{include './public/header.html'}}
+<body>
+  <div class="container-fluid">
+    {{include './public/nav_top.html'}}
+      <div class="row">
+        {{include './public/sidebar.html'}}
+            <div class="content col-10">
+                <nav aria-label="breadcrumb w-100">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="{{__HOST__}}/admin/">Home</a></li>
+                      <li class="breadcrumb-item"><a href="{{__HOST__}}/admin/">控制台</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">控制台</li>
+                    </ol>
+                </nav>
+                <div class="jumbotron">
+                    <h1 class="display-4">欢迎来到HS后台管理系统!</h1>
+                    <p class="lead">这是一套美观简便的管理系统</p>
+                    <hr class="my-4">
+                    <p>本系统集成了客户信息管理、商品管理、财务管理等...</p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-lg" href="#" role="button">了解更多</a>
+                    </p>
+                  </div>
+            </div>
+      </div>
+  </div>
+</body>
+</html>
