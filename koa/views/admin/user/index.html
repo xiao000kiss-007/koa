@@ -1,0 +1,66 @@
+{{include '../public/header.html'}}
+<body>
+  <div class="container-fluid">
+    {{include '../public/nav_top.html'}}
+      <div class="row">
+        {{include '../public/sidebar.html'}}
+            <div class="content col-10">
+                <nav aria-label="breadcrumb w-100">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">控制台</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">控制台</li>
+                    </ol>
+                </nav>
+                <div class="content">
+                    <table class="table table-hover table-sm">
+                        <thead>
+                          <tr>
+                              <th scope="col">序号</th>
+                              <th scope="col">公司名称</th>
+                              <th scope="col"> 联系人</th>
+                              <th scope="col">联系电话</th>
+                              <th scope="col">统一信用代码</th>
+                              <th scope="col">国税密码</th>
+                              <th scope="col">地税密码</th>
+                              <th scope="col">法人代表</th>
+                              <th scope="col">身份证</th>
+                              <th scope="col">成立日期</th>
+                              <th scope="col">网申码</th>
+                              <th scope="col">地址</th>
+                              <th scope="col">业务类型</th>
+                              <th scope="col">操作</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {{each list}}
+                              <tr>
+                                <th scope="row">{{$index+1}}</th>
+                                <td>{{$value.name}}</td>
+                                <td>{{$value.contacts}}</td>
+                                <td>{{$value.phone}}</td>
+                                <td>{{$value.credit_code}}</td>
+                                <td>{{$value.national_code}}</td>
+                                <td>{{$value.local_code}}</td>
+                                <td>{{$value.corporate_representative}}</td>
+                                <td>{{$value.id_card}}</td>
+                                <td>{{$value.date}}</td>
+                                <td>{{$value.net_code}}</td>
+                                <td>{{$value.address}}</td>
+                                <td>{{$value.business_type}}</td>
+                                <td>
+                                  <span class="class="btn-group" role="group" aria-label="Basic example"">
+                                    <a href="" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="" class="btn btn-danger btn-sm">删除</a>
+                                  </span>
+                                </td>
+                              </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div> 
+          </div>
+      </div>
+  </div>
+</body>
+</html>

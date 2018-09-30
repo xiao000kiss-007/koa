@@ -1,10 +1,15 @@
 const router=require('koa-router')();
+const DB=require('../../module/db.js');
 
 router.get('/',async (ctx)=>{
-    await ctx.render('admin/index');
+    let result=await DB.find('admin',{});
+    // console.log(result);
+    await ctx.render('admin/admin/index',{list:result});
 })
 router.get('/list',async (ctx)=>{
-    await ctx.render('admin/admin/index');
+    let result=await DB.find('admin',{});
+    // console.log(result);
+    await ctx.render('admin/admin/index',{list:result});
 })
 router.get('/add',async (ctx)=>{
     await ctx.render('admin/admin/add');

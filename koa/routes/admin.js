@@ -24,6 +24,9 @@ router.use(async(ctx,next)=>{
     }
 })
 
+router.get('/',async(ctx)=>{
+    await ctx.render('admin/index');
+})
 router.use('/user',user)
 router.use('/focus',focus)
 router.use('/news',news)

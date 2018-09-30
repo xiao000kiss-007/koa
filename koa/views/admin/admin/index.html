@@ -18,28 +18,29 @@
                           <tr>
                             <th scope="col-1">序号</th>
                             <th scope="col-2">用户名</th>
-                            <th scope="col-4">状态</th>
-                            <th scope="col-5">公司名称</th>
+                            <th scope="col-4">公司名称</th>
+                            <th scope="col-2">状态</th>
+                            <th scope="col-3">编辑</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
+                            {{each list}}
+                              <tr>
+                                <th scope="row">{{$index+1}}</th>
+                                <td>{{$value.username}}</td>
+                                <td>{{$value.companyname}}</td>
+                                <td>
+                                  <span class="badge  badge-pill badge-success">{{$value.status}}</span>
+                                </td>
+                                <td>
+                                  <span class="class="btn-group" role="group" aria-label="Basic example"">
+                                    <a href="" class="btn btn-primary btn-sm">编辑</a>
+                                    <a href="" class="btn btn-danger btn-sm">删除</a>
+                                  </span>
+                                </td>
+                              </tr>
+                            {{/each}}
+
                         </tbody>
                       </table>
                 </div>
