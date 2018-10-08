@@ -1,0 +1,58 @@
+{{include '../public/header.html'}}
+<body>
+  <div class="container-fluid">
+    {{include '../public/nav_top.html'}}
+      <div class="row">
+        {{include '../public/sidebar.html'}}
+            <div class="content col-10">
+                <nav aria-label="breadcrumb w-100">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">商品信息管理</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">商品信息列表</li>
+                    </ol>
+                </nav>
+                <div class="content">
+                    <table class="table table-hover table-sm">
+                        <thead>
+                          <tr>
+                              <th scope="col">商品编码</th>
+                              <th scope="col">商品名称</th>
+                              <th scope="col">商品分类</th>
+                              <th scope="col">商品库存数量</th>
+                              <th scope="col">当前单价</th>
+                              <th scope="col">库存总金额</th>
+                              <th scope="col">期初库存</th>
+                              <th scope="col">本期入库</th>
+                              <th scope="col">入库日期</th>
+                              <th scope="col">本期出库</th>
+                              <th scope="col">出库日期</th>
+                              <th scope="col">期初总价</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {{each list}}
+                              <tr>
+                                <th scope="row">{{$value.BM}}</th>
+                                <td>{{$value.MZ}}</td>
+                                <td>{{$value.FL}}</td>
+                                <td>{{$value.SPKCSL}}</td>
+                                <td>{{$value.DJ}}</td>
+                                <td>{{$value.ZJE}}</td>
+                                <td>{{$value.QCKC}}</td>
+                                <td>{{$value.BQRC}}</td>
+                                <td>{{$value.RKRQ}}</td>
+                                <td>{{$value.BQCK}}</td>
+                                <td>{{$value.CKRQ}}</td>
+                                <td>{{$value.QCZJ}}</td>
+                              </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div> 
+          </div>
+      </div>
+  </div>
+</body>
+</html>

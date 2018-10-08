@@ -1,51 +1,20 @@
-{{include '../public/header.html'}}
-<body>
-  <div class="container-fluid">
-    {{include '../public/nav_top.html'}}
-      <div class="row">
-        {{include '../public/sidebar.html'}}
-            <div class="content col-10">
-                <nav aria-label="breadcrumb w-100">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">admin</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">list</li>
-                    </ol>
-                </nav>
-                <div class="content">
-                    <table class="table table-hover">
-                        <thead>
-                          <tr>
-                            <th scope="col-1">序号</th>
-                            <th scope="col-2">用户名</th>
-                            <th scope="col-4">公司名称</th>
-                            <th scope="col-2">状态</th>
-                            <th scope="col-3">编辑</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            {{each list}}
-                              <tr>
-                                <th scope="row">{{$index+1}}</th>
-                                <td>{{$value.username}}</td>
-                                <td>{{$value.companyname}}</td>
-                                <td>
-                                  <span class="badge  badge-pill badge-success">{{$value.status}}</span>
-                                </td>
-                                <td>
-                                  <span class="class="btn-group" role="group" aria-label="Basic example"">
-                                    <a href="" class="btn btn-primary btn-sm">编辑</a>
-                                    <a href="" class="btn btn-danger btn-sm">删除</a>
-                                  </span>
-                                </td>
-                              </tr>
-                            {{/each}}
+{{extend '../index.html'}}
+{{block 'content'}}
+  <div class="content col-10">
+    <nav aria-label="breadcrumb w-100">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{__HOST__}}/admin/"><i class="fa fa-home fa-lg"></i>&nbsp;首页</a></li>
+        </ol>
+    </nav>
+    <div class="jumbotron">
+      <h1 class="display-4">欢迎来到HS后台管理系统!</h1>
+      <p class="lead">这是一套美观简便的管理系统</p>
+      <hr class="my-4">
+      <p>本系统集成了客户信息管理、商品管理、财务管理等...</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">了解更多</a>
+      </p>
+    </div>
 
-                        </tbody>
-                      </table>
-                </div>
-          </div>
-      </div>
-  </div>
-</body>
-</html>
+  </div>  
+{{/block}}

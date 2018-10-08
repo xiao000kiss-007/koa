@@ -4,6 +4,8 @@ const DB=require('../../module/db.js');
 router.get('/',async (ctx)=>{
     let result=await DB.find('users',{});
     // console.log(result);
+    template.defaults.imports.dateFormat = function(date, format){/*[code..]*/};
+    template.defaults.imports.timestamp = function(value){return value * 1000};
     await ctx.render('admin/user/index',{list:result});
 })
 router.get('/list',async (ctx)=>{

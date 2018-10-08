@@ -44,7 +44,7 @@
                                 <td>{{$value.local_code}}</td>
                                 <td>{{$value.corporate_representative}}</td>
                                 <td>{{$value.id_card}}</td>
-                                <td>{{$value.date}}</td>
+                                <td>{{$value.date | timestamp | dateFormat 'yyyy-MM-dd'}}</td>
                                 <td>{{$value.net_code}}</td>
                                 <td>{{$value.address}}</td>
                                 <td>{{$value.business_type}}</td>

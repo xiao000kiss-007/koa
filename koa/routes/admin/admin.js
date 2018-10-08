@@ -9,7 +9,7 @@ router.get('/',async (ctx)=>{
 router.get('/list',async (ctx)=>{
     let result=await DB.find('admin',{});
     // console.log(result);
-    await ctx.render('admin/admin/index',{list:result});
+    await ctx.render('admin/admin/list',{list:result});
 })
 router.get('/add',async (ctx)=>{
     await ctx.render('admin/admin/add');

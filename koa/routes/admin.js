@@ -1,6 +1,6 @@
 const router=require('koa-router')();
 const user=require('./admin/user.js');
-const focus=require('./admin/focus.js');
+const product=require('./admin/product.js');
 const news=require('./admin/news.js');
 const login=require('./admin/login.js');
 const admin=require('./admin/admin.js');
@@ -25,10 +25,10 @@ router.use(async(ctx,next)=>{
 })
 
 router.get('/',async(ctx)=>{
-    await ctx.render('admin/index');
+    await ctx.render('admin/admin/index.html');
 })
 router.use('/user',user)
-router.use('/focus',focus)
+router.use('/product',product)
 router.use('/news',news)
 router.use('/login',login)
 router.use('/admin',admin)
